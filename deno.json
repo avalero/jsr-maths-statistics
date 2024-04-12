@@ -1,0 +1,14 @@
+{
+  "name": "@maths/statistics",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "description": "A simple maths library",
+  "publish": {
+    "exclude": ["./src/tests", ".gitignore", ".vscode", ".github"]
+  },
+  "tasks": {
+    "test": "deno test ./src/tests"
+  }
+}
