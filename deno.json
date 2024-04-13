@@ -1,6 +1,6 @@
 {
   "name": "@maths/statistics",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "exports": {
     ".": "./mod.ts"
   },

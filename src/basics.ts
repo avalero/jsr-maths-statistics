@@ -17,11 +17,12 @@ export function average(arr: number[]): number {
 /**
  * Compute variance of an array of numbers
  * @param arr Array of numbers
+ * @param average Average of the array (optional, if provided, it will not be calculated again)
  * @returns Variance of the array
  * @example variance([1, 2, 3, 4, 7]) // 4.24
  */
-export function variance(arr: number[]): number {
-  const mean = average(arr);
+export function variance(arr: number[], avg?: number): number {
+  const mean = avg || average(arr);
   const sum = arr.reduce((acc, curr) => acc + Math.pow(curr - mean, 2), 0);
   return sum / arr.length;
 }
@@ -32,8 +33,12 @@ export function variance(arr: number[]): number {
  * @returns maximum number in the array
  * @example stdDev([1, 2, 3, 4, 7]) // 2.06
  */
-export function stdDev(arr: number[]): number {
-  return Math.sqrt(variance(arr));
+export function stdDev(
+  arr: number[],
+  avg?: number,
+  _variance?: number
+): number {
+  return Math.sqrt(_variance || variance(arr, avg));
 }
 
 /**
