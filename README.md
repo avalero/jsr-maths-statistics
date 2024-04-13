@@ -74,6 +74,18 @@ import { range } from './stats';
 console.log(range([1, 2, 3, 4, 7])); // Outputs: 6
 ```
 
+### `covariance(array1: number[], array2: number[]): number`
+
+Computes the covariance of two arrays of numbers.
+
+**Example:**
+```typescript
+import { covariance } from './stats';
+
+console.log(covariance([1, 2, 3, 4, 7], [1, 2, 3, 4, 7])); // Outputs: 4.24
+```
+
+
 ## Contributing
 
 Contributions to improve the module are welcome. Please follow the standard GitHub pull request process to propose changes.

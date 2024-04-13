@@ -5,3 +5,5 @@
  * @module Stats
  */
 export * from "./src/basics.ts";
+export * from "./src/covariance.ts";
+export * from "./src/correlation.ts";
